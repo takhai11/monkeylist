@@ -1,0 +1,20 @@
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{monkey.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>{{monkey.title}}</h3>
+  <div class="detail type">
+    <span>Type:</span> {{monkey.type}}
+  </div>
+  <div class="detail location">
+    <span>Location:</span> {{monkey.city}}
+  </div>
+ </article>
+
+ <article class="listing">
+   <a target="_blank" href={{monkey.link}}>
+{{monkey-type monkey.title monkey.type monkey.about}}
+</a>
+ </article>
+ {{yield}}  
